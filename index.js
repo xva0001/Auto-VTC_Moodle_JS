@@ -10,7 +10,7 @@ function delay(milliseconds){
 
 const mainF = async ()=>{
     const driver = await new Builder().forBrowser("MicrosoftEdge").build()
-    await driver.get("https://moodle2324.vtc.edu.hk/auth/saml2/login.php")//better link
+    await driver.get("https://moodle2324.vtc.edu.hk/auth/saml2/login.php")
     await delay(2000)
     //userNameInput
     await driver.findElement(By.id("userNameInput")).sendKeys(process.env.VTC_username)
